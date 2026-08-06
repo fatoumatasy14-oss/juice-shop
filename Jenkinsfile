@@ -1,35 +1,21 @@
-pipeline {
-    agent any
+stage('Analyse SAST Semgrep') {
+    steps {
+        bat '''
+        echo ==========================
+        echo Version Semgrep
+        echo ==========================
 
-    stages {
+        "C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe" --version
 
-        stage('Checkout') {
-            steps {
-                echo 'Téléchargement du projet'
-            }
-        }
+        echo ==========================
+        echo Scan de sécurité Semgrep
+        echo ==========================
 
-        stage('Scan SAST Semgrep') {
-            steps {
-                bat '''
-                echo ==========================
-                echo Version Semgrep
-                echo ==========================
+        "C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe" --config auto .
 
-                C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe --version
-
-                echo ==========================
-                echo Scan de sécurité Semgrep
-                echo ==========================
-
-                C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe --config auto .
-
-                echo ==========================
-                echo Scan terminé
-                echo ==========================
-                '''
-            }
-        }
-
+        echo ==========================
+        echo Analyse terminée
+        echo ==========================
+        '''
     }
 }
