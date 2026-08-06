@@ -9,16 +9,24 @@ pipeline {
             }
         }
 
-        stage('Semgrep SAST Scan') {
+        stage('Scan SAST Semgrep') {
             steps {
                 bat '''
                 echo ==========================
                 echo Version Semgrep
-                semgrep --version
+                echo ==========================
+
+                C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe --version
 
                 echo ==========================
-                echo Scan de sécurité
-                semgrep --config auto .
+                echo Scan de sécurité Semgrep
+                echo ==========================
+
+                C:\\Users\\PC LENOVO\\AppData\\Roaming\\Python\\Python313\\Scripts\\semgrep.exe --config auto .
+
+                echo ==========================
+                echo Scan terminé
+                echo ==========================
                 '''
             }
         }
