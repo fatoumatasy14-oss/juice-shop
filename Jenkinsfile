@@ -19,14 +19,19 @@ pipeline {
         bat 'npm install --no-audit --prefer-offline'
       }
     }
-
+      steps {
+        echo 'Analyse statique du code avec Semgrep'
+        
     stage('Security Analysis - SAST (Semgrep)') {
       steps {
         echo 'Analyse statique du code avec Semgrep'
-        bat "\"${SEMGREP}\" scan --config auto --sarif --output semgrep-report.sarif ."
+        bat """
+chcp 65001
+set PYTHONIOENCODING=utf-8
+\"${SEMGREP}\" scan --config auto --sarif --output semgrep-report.sarif .
+"""
       }
     }
-
     stage('Additional Security Check - SCA (npm audit)') {
       steps {
         echo 'Analyse des dépendances avec npm audit'
