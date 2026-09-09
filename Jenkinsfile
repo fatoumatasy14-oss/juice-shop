@@ -1,81 +1,56 @@
 pipeline {
-    agent any
+  agent any
 
-    stages {
+  environment {
+    SEMGREP = 'C:\\Users\\PC LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\semgrep.exe'
+  }
 
-        stage('Checkout') {
-            steps {
-                echo 'Téléchargement du projet depuis GitHub'
-                checkout scm
-            }
-        }
-
-        stage('Scan SAST Semgrep') {
-            steps {
-                bat '''
-                @echo off
-
-                REM ==========================
-                REM Encodage UTF-8
-                REM ==========================
-                chcp 65001 > nul
-                set PYTHONUTF8=1
-                set PYTHONIOENCODING=utf-8
-
-                echo ==========================
-                echo Version Semgrep
-                echo ==========================
-
-                "C:\\Users\\PC LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\semgrep.exe" --version
-
-                echo.
-                echo ==========================
-                echo Analyse Semgrep (JSON)
-                echo ==========================
-
-                "C:\\Users\\PC LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\semgrep.exe" --config auto --json --output semgrep-report.json .
-
-                echo.
-                echo ==========================
-                echo Analyse Semgrep (SARIF)
-                echo ==========================
-
-                "C:\\Users\\PC LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\semgrep.exe" --config auto --sarif --output semgrep-report.sarif . || echo Erreur SARIF ignoree
-
-                echo.
-                echo ==========================
-                echo Rapports generes
-                echo ==========================
-
-                dir semgrep-report.*
-
-                echo.
-                echo ==========================
-                echo Analyse terminee
-                echo ==========================
-                '''
-            }
-        }
-
-        stage('Archivage des rapports') {
-            steps {
-                archiveArtifacts artifacts: 'semgrep-report.*', fingerprint: true, allowEmptyArchive: true
-            }
-        }
+  stages {
+    stage('Checkout') {
+      steps {
+        echo 'Téléchargement du projet depuis GitHub'
+        checkout scm
+      }
     }
 
-    post {
-
-        success {
-            echo 'Build terminé avec succès.'
-        }
-
-        failure {
-            echo 'Le build a échoué.'
-        }
-
-        always {
-            echo 'Fin du pipeline Jenkins.'
-        }
+    stage('Build / Preparation') {
+      steps {
+        echo 'Installation des dépendances du projet'
+        bat 'npm install --no-audit --prefer-offline'
+      }
     }
+
+    stage('Security Analysis - SAST (Semgrep)') {
+      steps {
+        echo 'Analyse statique du code avec Semgrep'
+        bat "\"${SEMGREP}\" scan --config auto --sarif --output semgrep-report.sarif ."
+      }
+    }
+
+    stage('Additional Security Check - SCA (npm audit)') {
+      steps {
+        echo 'Analyse des dépendances avec npm audit'
+        bat 'npm audit --json > npm-audit-report.json || exit 0'
+      }
+    }
+
+    stage('Report Generation') {
+      steps {
+        echo 'Archivage des rapports de sécurité'
+        archiveArtifacts artifacts: 'semgrep-report.sarif, npm-audit-report.json', fingerprint: true
+      }
+    }
+
+    stage('Notification') {
+      steps {
+        echo 'Envoi du rapport par e-mail'
+        emailext (
+          subject: "Résultat du build ${env.JOB_NAME} #${env.BUILD_NUMBER}: ${currentBuild.currentResult}",
+          body: "Le pipeline de sécurité s'est terminé avec le statut ${currentBuild.currentResult}. Rapports en pièce jointe.",
+          to: 'fatoumata.sy14@unchk.edu.sn',
+          attachmentsPattern: 'semgrep-report.sarif, npm-audit-report.json'
+        )
+      }
+    }
+  }
 }
