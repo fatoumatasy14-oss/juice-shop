@@ -19,19 +19,17 @@ pipeline {
         bat 'npm install --no-audit --prefer-offline'
       }
     }
-
+    
     stage('Security Analysis - SAST (Semgrep)') {
       steps {
         echo 'Analyse statique du code avec Semgrep'
-        bat """
-chcp 65001
-set PYTHONIOENCODING=utf-8
-\"${SEMGREP}\" scan --config auto --sarif --output semgrep-report.sarif .
-"""
+        powershell '''
+$env:PYTHONUTF8 = "1"
+$env:PYTHONIOENCODING = "utf-8"
+& "C:\\Users\\PC LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\semgrep.exe" scan --config auto --sarif --output semgrep-report.sarif .
+'''
       }
-    }
-
-    stage('Additional Security Check - SCA (npm audit)') {
+    }    stage('Additional Security Check - SCA (npm audit)') {
       steps {
         echo 'Analyse des dépendances avec npm audit'
         bat 'npm audit --json > npm-audit-report.json || exit 0'
