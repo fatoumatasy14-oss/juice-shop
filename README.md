@@ -17,3 +17,21 @@ Le pipeline Jenkins exécute automatiquement les analyses à chaque build :
 - **SCA (npm audit)** : `npm audit --json > npm-audit-report.json`
 
 Pour lancer manuellement en local :
+semgrep scan --config auto --sarif --output semgrep-report.sarif .
+npm audit
+
+## Outils utilisés
+
+| Outil | Type | Rôle |
+|---|---|---|
+| Semgrep | SAST | Analyse statique du code source |
+| npm audit | SCA | Analyse des dépendances vulnérables |
+| Jenkins | CI/CD | Automatisation du pipeline de sécurité |
+
+## Structure du dépôt
+
+- `Jenkinsfile` — pipeline d'intégration continue à 6 étapes
+- `reports/` — rapports générés (Semgrep SARIF, npm audit JSON)
+- `screenshots/` — captures d'écran des tests et du pipeline
+- `security-config/` — configuration des outils de sécurité
+- `remediation/` — détail des corrections appliquées
