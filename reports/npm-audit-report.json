@@ -1,0 +1,1988 @@
+{
+  "auditReportVersion": 2,
+  "vulnérabilités" : {
+    "@cyclonedx/cyclonedx-npm": {
+      "nom": "@cyclonedx/cyclonedx-npm",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1121296,
+          "nom": "@cyclonedx/cyclonedx-npm",
+          "dépendance": "@cyclonedx/cyclonedx-npm",
+          "title": "@cyclonedx/cyclonedx-npm : Injection de shell via l'argument --workspace non nettoyé",
+          "url": "https://github.com/advisories/GHSA-v75r-vx73-82pj",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-78"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": ">=2.1.0 <5.0.0"
+        }
+      ],
+      "effets" : [],
+      "plage": "2.1.0 - 4.2.1",
+      "nœuds" : [
+        "node_modules/@cyclonedx/cyclonedx-npm"
+      ],
+      "fixAvailable": {
+        "nom": "@cyclonedx/cyclonedx-npm",
+        "version": "2.0.0"
+      }
+    },
+    "@tootallnate/once": {
+      "nom": "@tootallnate/once",
+      "gravité" : "faible",
+      "isDirect": faux,
+      "via": [
+        {
+          "source" : 1119438,
+          "nom": "@tootallnate/once",
+          "dépendance": "@toolnnate/once",
+          "title": "@tootallnate/once vulnérable à une portée de flux de contrôle incorrecte",
+          "url": "https://github.com/advisories/GHSA-vpq2-c234-7xj6",
+          "gravité" : "faible",
+          "cwe": [
+            "CWE-705"
+          ],
+          "cvss": {
+            "score" : 3,3,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": "<2.0.1"
+        }
+      ],
+      "effets" : [
+        "agent proxy HTTP"
+      ],
+      "plage": "<2.0.1",
+      "nœuds" : [
+        "node_modules/@tootallnate/once"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "base64url": {
+      "nom": "base64url",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1091792,
+          "nom": "base64url",
+          "dépendance": "base64url",
+          "title": "Lecture hors limites dans une URL base64",
+          "url": "https://github.com/advisories/GHSA-rvg8-pwq2-xj7q",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-125"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<3.0.0"
+        }
+      ],
+      "effets" : [
+        "jwa",
+        "JW"
+      ],
+      "plage": "<3.0.0",
+      "nœuds" : [
+        "node_modules/base64url"
+      ],
+      "fixAvailable": {
+        "nom": "jsonwebtoken",
+        "version": "9.0.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "cacache": {
+      "nom": "cacache",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        "goudron"
+      ],
+      "effets" : [
+        "faire-aller-retour"
+      ],
+      "plage": "14.0.0 - 18.0.4",
+      "nœuds" : [
+        "node_modules/sqlite3/node_modules/cacache"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "requête pouvant être mise en cache" : {
+      "nom": "requête pouvant être mise en cache",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        "sémantique du cache HTTP",
+        "normaliser-url"
+      ],
+      "effets" : [
+        "a obtenu"
+      ],
+      "plage": "0.1.0 - 2.1.4",
+      "nœuds" : [
+        "node_modules/cacheable-request"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "cookie": {
+      "nom": "cookie",
+      "gravité" : "faible",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1103907,
+          "nom": "cookie",
+          "dépendance": "cookie",
+          "title": "Le cookie accepte le nom, le chemin et le domaine du cookie avec des caractères hors limites",
+          "url": "https://github.com/advisories/GHSA-pxg6-pf52-xh8x",
+          "gravité" : "faible",
+          "cwe": [
+            "CWE-74"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<0,7,0"
+        }
+      ],
+      "effets" : [
+        "engine.io"
+      ],
+      "plage": "<0,7,0",
+      "nœuds" : [
+        "node_modules/engine.io/node_modules/cookie"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "crypto-js": {
+      "nom": "crypto-js",
+      "gravité" : "critique",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1096365,
+          "nom": "crypto-js",
+          "dépendance": "crypto-js",
+          "title": "crypto-js PBKDF2 1 000 fois plus faible que spécifié en 1993 et ​​1,3 million de fois plus faible que la norme actuelle",
+          "url": "https://github.com/advisories/GHSA-xwcq-pm8m-c4vf",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-327",
+            "CWE-328",
+            "CWE-916"
+          ],
+          "cvss": {
+            "score" : 9,1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+          },
+          "plage": "<4.2.0"
+        },
+        {
+          "source": 1138770,
+          "nom": "crypto-js",
+          "dépendance": "crypto-js",
+          "title": "crypto-js : Entropie insuffisante dans la génération de secrets cryptographiques via une chaîne de dépendances CryptoJS vulnérable",
+          "url": "https://github.com/advisories/GHSA-rg76-677x-56q9",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-331",
+            "CWE-334",
+            "CWE-338"
+          ],
+          "cvss": {
+            "score" : 9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+          },
+          "plage": "<4.0.0"
+        }
+      ],
+      "effets" : [
+        "pdfkit"
+      ],
+      "plage": "<=4.1.1",
+      "nœuds" : [
+        "node_modules/crypto-js"
+      ],
+      "fixAvailable": {
+        "nom": "pdfkit",
+        "version": "0.20.2",
+        "isSemVerMajor": vrai
+      }
+    },
+    "decode-uri-component": {
+      "nom": "decode-uri-component",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1147955,
+          "nom": "decode-uri-component",
+          "dépendance": "decode-uri-component",
+          "title": "decode-uri-component : Déni de service via le décodage exponentiel d'une entrée malformée encodée en pourcentage",
+          "url": "https://github.com/advisories/GHSA-vcc3-ghjq-m6fr",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-400",
+            "CWE-405",
+            "CWE-407",
+            "CWE-1176"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=0,4,2"
+        }
+      ],
+      "effets" : [
+        "chaîne de requête"
+      ],
+      "plage": "<=0,4,2",
+      "nœuds" : [
+        "node_modules/decode-uri-component"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "décompresser" : {
+      "nom": "décompresser",
+      "gravité" : "critique",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1122670,
+          "nom": "décompresser",
+          "dépendance": "décompresser",
+          "title": "Décompression : l’extraction d’archives peut créer des fichiers et des liens en dehors du répertoire cible",
+          "url": "https://github.com/advisories/GHSA-mp2f-45pm-3cg9",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-22",
+            "CWE-59",
+            "CWE-732"
+          ],
+          "cvss": {
+            "score" : 9,1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+          },
+          "plage": "<=4.2.1"
+        },
+        {
+          "source": 1130126,
+          "nom": "décompresser",
+          "dépendance": "décompresser",
+          "title": "décompression : écriture de fichiers arbitraires via extraction d'archive (Zip Slip)",
+          "url": "https://github.com/advisories/GHSA-h39j-r5qq-r9mm",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-22",
+            "CWE-29"
+          ],
+          "cvss": {
+            "score" : 6,4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:L"
+          },
+          "plage": "<=4.2.1"
+        },
+        {
+          "source": 1139405,
+          "nom": "décompresser",
+          "dépendance": "décompresser",
+          "title": "La décompression permet la création de liens physiques arbitraires lors de l'extraction d'archives",
+          "url": "https://github.com/advisories/GHSA-jwp9-9v96-94mx",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-59"
+          ],
+          "cvss": {
+            "score" : 5,5,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "plage": "<=4.2.1"
+        }
+      ],
+      "effets" : [
+        "télécharger"
+      ],
+      "gamme": "*",
+      "nœuds" : [
+        "node_modules/decompress"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "télécharger": {
+      "nom": "télécharger",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        "décompresser",
+        "a obtenu"
+      ],
+      "effets" : [],
+      "plage": "<=2.0.0 || >=4.0.0",
+      "nœuds" : [
+        "node_modules/download"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "engine.io": {
+      "nom": "engine.io",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1089525,
+          "nom": "engine.io",
+          "dépendance": "engine.io",
+          "title": "Exception non interceptée dans engine.io",
+          "url": "https://github.com/advisories/GHSA-r7qp-cfhv-p84w",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-248"
+          ],
+          "cvss": {
+            "score": 6,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": ">=4.0.0 <6.2.1"
+        },
+        {
+          "source" : 1123943,
+          "nom": "engine.io",
+          "dépendance": "engine.io",
+          "title": "Socket.IO : Épuisement de la connexion de transport par interrogation Engine.IO",
+          "url": "https://github.com/advisories/GHSA-r635-g3xr-vw7x",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-404"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": ">=4.1.0 <6.6.7"
+        },
+        "cookie",
+        "ws"
+      ],
+      "effets" : [
+        "socket.io"
+      ],
+      "plage": "0.7.8 - 0.7.9 || 1.8.0 - 6.6.6",
+      "nœuds" : [
+        "node_modules/engine.io"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "engine.io-client": {
+      "nom": "engine.io-client",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        "parseuri",
+        "ws"
+      ],
+      "effets" : [
+        "socket.io-client"
+      ],
+      "plage": "0.7.0 || 0.7.8 - 0.7.9 || 1.0.2 - 6.1.1",
+      "nœuds" : [
+        "node_modules/engine.io-client"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io-client",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "exprimer": {
+      "nom": "express",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        "qs"
+      ],
+      "effets" : [],
+      "plage": "4.22.2",
+      "nœuds" : [
+        "node_modules/express"
+      ],
+      "fixAvailable" : vrai
+    },
+    "express-jwt": {
+      "nom": "express-jwt",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1090200,
+          "nom": "express-jwt",
+          "dépendance" : "express-jwt",
+          "title": "Contournement d'autorisation dans express-jwt",
+          "url": "https://github.com/advisories/GHSA-6g6m-m6h5-w9gf",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-285",
+            "CWE-863"
+          ],
+          "cvss": {
+            "score": 7,7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+          },
+          "plage": "<=5.3.3"
+        },
+        "jsonwebtoken"
+      ],
+      "effets" : [],
+      "plage": "<=7.7.7",
+      "nœuds" : [
+        "node_modules/express-jwt"
+      ],
+      "fixAvailable": {
+        "nom": "express-jwt",
+        "version": "8.5.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "type de fichier" : {
+      "nom": "type-de-fichier",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1114301,
+          "nom": "type-de-fichier",
+          "dépendance": "type-de-fichier",
+          "title": "Type de fichier affecté par une boucle infinie dans l'analyseur ASF sur une entrée malformée avec un sous-en-tête de taille nulle",
+          "url": "https://github.com/advisories/GHSA-5v7r-6r5c-r473",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": ">=13.0.0 <21.3.1"
+        }
+      ],
+      "effets" : [],
+      "plage": "13.0.0 - 21.3.0",
+      "nœuds" : [
+        "node_modules/type-de-fichier"
+      ],
+      "fixAvailable": {
+        "nom": "type-de-fichier",
+        "version": "22.0.2",
+        "isSemVerMajor": vrai
+      }
+    },
+    "a obtenu": {
+      "nom": "got",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1088948,
+          "nom": "got",
+          "dépendance" : "obtenu",
+          "title": "Got permet une redirection vers un socket UNIX",
+          "url": "https://github.com/advisories/GHSA-pfrx-2q88-qq97",
+          "gravité" : "modérée",
+          "cwe": [],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "plage": "<11.8.5"
+        },
+        "requête pouvant être mise en cache"
+      ],
+      "effets" : [
+        "télécharger"
+      ],
+      "plage": "<=11.8.3",
+      "nœuds" : [
+        "node_modules/got"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "grunt-replace-json": {
+      "nom": "grunt-replace-json",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        "lodash.set"
+      ],
+      "effets" : [],
+      "gamme": "*",
+      "nœuds" : [
+        "node_modules/grunt-replace-json"
+      ],
+      "fixAvailable" : faux
+    },
+    "http-cache-semantics": {
+      "nom": "http-cache-semantics",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1102456,
+          "nom": "http-cache-semantics",
+          "dépendance": "http-cache-semantics",
+          "title": "http-cache-semantics vulnérable à une attaque par déni de service via expression régulière",
+          "url": "https://github.com/advisories/GHSA-rc47-6667-2j5j",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<4.1.1"
+        }
+      ],
+      "effets" : [
+        "requête pouvant être mise en cache"
+      ],
+      "plage": "<4.1.1",
+      "nœuds" : [
+        "node_modules/http-cache-semantics"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "http-proxy-agent" : {
+      "nom": "agent proxy HTTP",
+      "gravité" : "faible",
+      "isDirect": faux,
+      "via": [
+        "@tootallnate/once"
+      ],
+      "effets" : [
+        "faire-aller-retour"
+      ],
+      "plage": "4.0.1",
+      "nœuds" : [
+        "node_modules/sqlite3/node_modules/http-proxy-agent"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "istanbul-lib-processinfo": {
+      "nom": "istanbul-lib-processinfo",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        "uuid"
+      ],
+      "effets" : [
+        "nyc"
+      ],
+      "plage": "<=3.0.0",
+      "nœuds" : [
+        "node_modules/istanbul-lib-processinfo"
+      ],
+      "fixAvailable": {
+        "nom": "nyc",
+        "version": "18.0.0",
+        "isSemVerMajor": vrai
+      }
+    },
+    "jsonwebtoken": {
+      "nom": "jsonwebtoken",
+      "gravité" : "critique",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1090918,
+          "nom": "jsonwebtoken",
+          "dépendance": "jsonwebtoken",
+          "title": "Contournement de la vérification dans jsonwebtoken",
+          "url": "https://github.com/advisories/GHSA-c7hr-j4mj-j2w6",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-20"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<4.2.2"
+        },
+        {
+          "source": 1097690,
+          "nom": "jsonwebtoken",
+          "dépendance": "jsonwebtoken",
+          "title": "Le type de clé non restreint jsonwebtoken pourrait entraîner l'utilisation de clés héritées",
+          "url": "https://github.com/advisories/GHSA-8cf7-32gw-wr33",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-327"
+          ],
+          "cvss": {
+            "score" : 8,1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          },
+          "plage": "<=8.5.1"
+        },
+        {
+          "source": 1097694,
+          "nom": "jsonwebtoken",
+          "dépendance": "jsonwebtoken",
+          "title": "L'implémentation non sécurisée de la fonction de récupération de clés de jsonwebtoken pourrait conduire à la falsification de jetons publics/privés de RSA à HMAC",
+          "url": "https://github.com/advisories/GHSA-hjrf-2m68-5959",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-287",
+            "CWE-1259"
+          ],
+          "cvss": {
+            "score" : 5,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "plage": "<=8.5.1"
+        },
+        {
+          "source": 1102458,
+          "nom": "jsonwebtoken",
+          "dépendance": "jsonwebtoken",
+          "title": "jsonwebtoken vulnérable au contournement de la validation de signature en raison d'un algorithme par défaut non sécurisé dans jwt.verify()",
+          "url": "https://github.com/advisories/GHSA-qwph-4952-7xr6",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-287",
+            "CWE-327",
+            "CWE-347"
+          ],
+          "cvss": {
+            "score" : 6,4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L"
+          },
+          "plage": "<9.0.0"
+        },
+        "jws",
+        "moment"
+      ],
+      "effets" : [
+        "express-jwt"
+      ],
+      "plage": "<=8.5.1",
+      "nœuds" : [
+        "node_modules/express-jwt/node_modules/jsonwebtoken",
+        "node_modules/jsonwebtoken"
+      ],
+      "fixAvailable": {
+        "nom": "jsonwebtoken",
+        "version": "9.0.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "jwa": {
+      "nom": "jwa",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        "base64url"
+      ],
+      "effets" : [
+        "JW"
+      ],
+      "plage": "<=1.1.5",
+      "nœuds" : [
+        "node_modules/jwa"
+      ],
+      "fixAvailable": {
+        "nom": "jsonwebtoken",
+        "version": "9.0.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "jws": {
+      "nom": "jws",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1087397,
+          "nom": "jws",
+          "dépendance" : "jws",
+          "title": "Jetons publics/privés falsifiables dans jws",
+          "url": "https://github.com/advisories/GHSA-gjcw-v447-2w7q",
+          "gravité" : "élevée",
+          "cwe": [],
+          "cvss": {
+            "score" : 8,7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+          },
+          "plage": "<3.0.0"
+        },
+        {
+          "source": 1111244,
+          "nom": "jws",
+          "dépendance" : "jws",
+          "title": "auth0/node-jws Vérifie incorrectement la signature HMAC",
+          "url": "https://github.com/advisories/GHSA-869p-cjfg-cm3x",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-347"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "plage": "<3.2.3"
+        },
+        "base64url",
+        "jwa"
+      ],
+      "effets" : [
+        "jsonwebtoken"
+      ],
+      "plage": "<=3.2.2",
+      "nœuds" : [
+        "node_modules/jws"
+      ],
+      "fixAvailable": {
+        "nom": "jsonwebtoken",
+        "version": "9.0.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "lodash": {
+      "nom": "lodash",
+      "gravité" : "critique",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1106900,
+          "nom": "lodash",
+          "dépendance": "lodash",
+          "title": "Prototype de pollution dans le lodash",
+          "url": "https://github.com/advisories/GHSA-fvqr-27wr-82fm",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-471",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "plage": "<4.17.5"
+        },
+        {
+          "source": 1106913,
+          "nom": "lodash",
+          "dépendance": "lodash",
+          "title": "Injection de commandes dans lodash",
+          "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-77",
+            "CWE-94"
+          ],
+          "cvss": {
+            "score": 7,2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "plage": "<4.17.21"
+        },
+        {
+          "source": 1106914,
+          "nom": "lodash",
+          "dépendance": "lodash",
+          "title": "Prototype de pollution dans le lodash",
+          "url": "https://github.com/advisories/GHSA-4xc9-xhrj-v574",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<4.17.11"
+        },
+        {
+          "source": 1106918,
+          "nom": "lodash",
+          "dépendance": "lodash",
+          "title": "Prototype de pollution dans le lodash",
+          "url": "https://github.com/advisories/GHSA-jf85-cpcp-j695",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-20",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score" : 9,1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          },
+          "plage": "<4.17.12"
+        },
+        {
+          "source": 1115810,
+          "nom": "lodash",
+          "dépendance": "lodash",
+          "title": "lodash vulnérable à la pollution de prototype via le contournement du chemin de tableau dans `_.unset` et `_.omit`",
+          "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "plage": "<=4.17.23"
+        }
+      ],
+      "effets" : [
+        "nettoyer-html"
+      ],
+      "plage": "<=4.17.23",
+      "nœuds" : [
+        "node_modules/sanitize-html/node_modules/lodash"
+      ],
+      "fixAvailable": {
+        "nom": "sanitize-html",
+        "version": "2.17.7",
+        "isSemVerMajor": vrai
+      }
+    },
+    "lodash.set": {
+      "nom": "lodash.set",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1106906,
+          "nom": "lodash.set",
+          "dépendance": "lodash.set",
+          "title": "Prototype de pollution dans le lodash",
+          "url": "https://github.com/advisories/GHSA-p6mc-m468-83gw",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-770",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score" : 7,4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          },
+          "plage": ">=3.7.0 <=4.3.2"
+        }
+      ],
+      "effets" : [
+        "grunt-replace-json"
+      ],
+      "gamme": "*",
+      "nœuds" : [
+        "node_modules/lodash.set"
+      ],
+      "fixAvailable" : faux
+    },
+    "faire-aller-retour" : {
+      "nom": "faire-aller-retour",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        "cacache",
+        "agent proxy HTTP"
+      ],
+      "effets" : [
+        "node-gyp"
+      ],
+      "plage": "7.1.1 - 14.0.0",
+      "nœuds" : [
+        "node_modules/sqlite3/node_modules/make-fetch-happen"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "marsdb": {
+      "nom": "marsdb",
+      "gravité" : "critique",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1086801,
+          "nom": "marsdb",
+          "dépendance": "marsdb",
+          "title": "Injection de commandes dans marsdb",
+          "url": "https://github.com/advisories/GHSA-5mrr-rgp6-x4gr",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-77"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": ">=0.0.0"
+        }
+      ],
+      "effets" : [],
+      "gamme": "*",
+      "nœuds" : [
+        "node_modules/marsdb"
+      ],
+      "fixAvailable" : faux
+    },
+    "minimatch" : {
+      "nom": "minimatch",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1113459,
+          "nom": "minimatch",
+          "dépendance" : "minimatch",
+          "title": "minimatch présente une vulnérabilité ReDoS via des caractères génériques répétés avec des littéraux non correspondants dans le modèle",
+          "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<3.1.3"
+        },
+        {
+          "source": 1113538,
+          "nom": "minimatch",
+          "dépendance" : "minimatch",
+          "title": "minimatch possède ReDoS : matchOne() effectue un retour arrière combinatoire via plusieurs segments GLOBSTAR non adjacents",
+          "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<3.1.3"
+        },
+        {
+          "source": 1113546,
+          "nom": "minimatch",
+          "dépendance" : "minimatch",
+          "title": "minimatch ReDoS : les extglobs *() imbriqués génèrent des expressions régulières avec un retour arrière catastrophique",
+          "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<3.1.4"
+        }
+      ],
+      "effets" : [
+        "remplacer"
+      ],
+      "plage": "<=3.1.3",
+      "nœuds" : [
+        "node_modules/replace/node_modules/minimatch"
+      ],
+      "fixAvailable": {
+        "nom": "remplacer",
+        "version": "0.2.2",
+        "isSemVerMajor": vrai
+      }
+    },
+    "moment": {
+      "nom": "moment",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1091022,
+          "nom": "moment",
+          "dépendance" : "moment",
+          "title": "Déni de service par expression régulière en cours",
+          "url": "https://github.com/advisories/GHSA-87vv-r9j6-g5qv",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 6,5,
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<2.11.2"
+        },
+        {
+          "source": 1091723,
+          "nom": "moment",
+          "dépendance" : "moment",
+          "title": "Déni de service par expression régulière en cours",
+          "url": "https://github.com/advisories/GHSA-446m-mv8f-q348",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<2.19.3"
+        },
+        {
+          "source": 1109571,
+          "nom": "moment",
+          "dépendance" : "moment",
+          "title": "Parcours de chemin : 'dir/../../filename' dans moment.locale",
+          "url": "https://github.com/advisories/GHSA-8hfj-j24r-96c4",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22",
+            "CWE-27"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "plage": "<2.29.2"
+        }
+      ],
+      "effets" : [
+        "jsonwebtoken"
+      ],
+      "plage": "<=2.29.1",
+      "nœuds" : [
+        "node_modules/express-jwt/node_modules/moment"
+      ],
+      "fixAvailable": {
+        "nom": "jsonwebtoken",
+        "version": "9.0.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "node-gyp": {
+      "nom": "node-gyp",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        "faire-aller-retour",
+        "goudron"
+      ],
+      "effets" : [
+        "sqlite3"
+      ],
+      "plage": "<=10.3.1",
+      "nœuds" : [
+        "node_modules/sqlite3/node_modules/node-gyp"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "normaliser-url": {
+      "nom": "normaliser-url",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        "chaîne de requête"
+      ],
+      "effets" : [
+        "requête pouvant être mise en cache"
+      ],
+      "plage": "2.0.0 - 2.0.1",
+      "nœuds" : [
+        "node_modules/normalize-url"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "notevil": {
+      "nom": "notevil",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1088750,
+          "nom": "notevil",
+          "dépendance": "notevil",
+          "title": "Évasion du bac à sable dans notevil et argencoders-notevil",
+          "url": "https://github.com/advisories/GHSA-8g4m-cjm2-96wq",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+          },
+          "plage": "<=1.3.3"
+        }
+      ],
+      "effets" : [],
+      "gamme": "*",
+      "nœuds" : [
+        "node_modules/notevil"
+      ],
+      "fixAvailable" : faux
+    },
+    "nyc": {
+      "nom": "nyc",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        "istanbul-lib-processinfo"
+      ],
+      "effets" : [],
+      "plage": "15.0.0-alpha.0 - 17.1.0",
+      "nœuds" : [
+        "node_modules/nyc"
+      ],
+      "fixAvailable": {
+        "nom": "nyc",
+        "version": "18.0.0",
+        "isSemVerMajor": vrai
+      }
+    },
+    "parseuri": {
+      "nom": "parseuri",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1107224,
+          "nom": "parseuri",
+          "dépendance": "parseuri",
+          "title": "parse-uri Expression régulière Déni de service (ReDoS)",
+          "url": "https://github.com/advisories/GHSA-6fx8-h7jm-663j",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-185",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<2.0.0"
+        }
+      ],
+      "effets" : [
+        "engine.io-client",
+        "socket.io-client"
+      ],
+      "plage": "<2.0.0",
+      "nœuds" : [
+        "node_modules/parseuri"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io-client",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "pdfkit": {
+      "nom": "pdfkit",
+      "gravité" : "critique",
+      "isDirect": vrai,
+      "via": [
+        "crypto-js"
+      ],
+      "effets" : [],
+      "plage": "0.9.0 - 0.12.1",
+      "nœuds" : [
+        "node_modules/pdfkit"
+      ],
+      "fixAvailable": {
+        "nom": "pdfkit",
+        "version": "0.20.2",
+        "isSemVerMajor": vrai
+      }
+    },
+    "qs": {
+      "nom": "qs",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1158506,
+          "nom": "qs",
+          "dépendance": "qs",
+          "title": "Contournement de la limite du tableau qs via l'analyse de la virgule entre crochets",
+          "url": "https://github.com/advisories/GHSA-x5fp-wj9c-mxmx",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-770"
+          ],
+          "cvss": {
+            "score" : 3,7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": ">=6.14.2 <=6.15.3"
+        },
+        {
+          "source": 1158507,
+          "nom": "qs",
+          "dépendance": "qs",
+          "title": "qs : Déni de service via isBuffer contrôlé par l'attaquant",
+          "url": "https://github.com/advisories/GHSA-4mjr-xmp4-gh2g",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-248",
+            "CWE-703"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": ">=2,2,5 <6,16,0"
+        }
+      ],
+      "effets" : [
+        "exprimer"
+      ],
+      "plage": "2.2.5 - 6.15.3",
+      "nœuds" : [
+        "node_modules/express/node_modules/qs"
+      ],
+      "fixAvailable" : vrai
+    },
+    "query-string": {
+      "nom": "chaîne de requête",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        "decode-uri-component"
+      ],
+      "effets" : [
+        "normaliser-url"
+      ],
+      "plage": "5.0.0 - 9.4.1",
+      "nœuds" : [
+        "node_modules/query-string"
+      ],
+      "fixAvailable": {
+        "nom": "télécharger",
+        "version": "4.4.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "remplacer": {
+      "nom": "remplacer",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        "minimatch"
+      ],
+      "effets" : [],
+      "plage": ">=0,2,3",
+      "nœuds" : [
+        "node_modules/replace"
+      ],
+      "fixAvailable": {
+        "nom": "remplacer",
+        "version": "0.2.2",
+        "isSemVerMajor": vrai
+      }
+    },
+    "sanitize-html": {
+      "nom": "sanitize-html",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1089955,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Validation incorrecte des entrées dans sanitize-html",
+          "url": "https://github.com/advisories/GHSA-mjxr-4v3x-q3m4",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-20"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "plage": "<2.3.2"
+        },
+        {
+          "source": 1090842,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Cross-Site Scripting dans sanitize-html",
+          "url": "https://github.com/advisories/GHSA-3j7m-hmh3-9jmp",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "plage": "<1.4.3"
+        },
+        {
+          "source": 1091789,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Validation incorrecte des entrées dans sanitize-html",
+          "url": "https://github.com/advisories/GHSA-rjqq-98f6-6j3r",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-20"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "plage": "<2.3.1"
+        },
+        {
+          "source": 1093595,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Cross-Site Scripting dans sanitize-html",
+          "url": "https://github.com/advisories/GHSA-xc6g-ggrc-qq4r",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=1.11.1"
+        },
+        {
+          "source": 1097161,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Sanitize-html vulnérable aux attaques REDoS",
+          "url": "https://github.com/advisories/GHSA-cgfm-xwp7-2cvr",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<2.7.1"
+        },
+        {
+          "source": 1107530,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "sanitize-html est vulnérable aux attaques XSS en raison d'une désinfection incomplète",
+          "url": "https://github.com/advisories/GHSA-qhxp-v273-g94h",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "plage": "<2.0.0-beta"
+        },
+        {
+          "source": 1115182,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "Vulnérabilité d'exposition d'informations sanitize-html",
+          "url": "https://github.com/advisories/GHSA-rm97-x556-q36h",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-200",
+            "CWE-538"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          },
+          "plage": "<2.12.1"
+        },
+        {
+          "source": 1164821,
+          "nom": "sanitize-html",
+          "dépendance": "sanitize-html",
+          "title": "ApostropheCMS : Contournement de Mutation-XSS / allowedTags via la fermeture littérale de la barre oblique `</textarea/>`",
+          "url": "https://github.com/advisories/GHSA-jxwj-j7wr-gfrw",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "plage": "<=2,17,5"
+        },
+        "lodash"
+      ],
+      "effets" : [],
+      "plage": "<=2,17,5",
+      "nœuds" : [
+        "node_modules/sanitize-html"
+      ],
+      "fixAvailable": {
+        "nom": "sanitize-html",
+        "version": "2.17.7",
+        "isSemVerMajor": vrai
+      }
+    },
+    "sequelize": {
+      "nom": "sequelize",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        "uuid"
+      ],
+      "effets" : [],
+      "plage": "0.0.0-développement || >=3.30.1",
+      "nœuds" : [
+        "node_modules/sequelize"
+      ],
+      "fixAvailable": {
+        "nom": "sequelize",
+        "version": "3.30.0",
+        "isSemVerMajor": vrai
+      }
+    },
+    "socket.io": {
+      "nom": "socket.io",
+      "gravité" : "modérée",
+      "isDirect": vrai,
+      "via": [
+        {
+          "source": 1100550,
+          "nom": "socket.io",
+          "dépendance": "socket.io",
+          "title": "socket.io a un événement 'error' non géré",
+          "url": "https://github.com/advisories/GHSA-25hc-qcg6-38wj",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-20",
+            "CWE-754"
+          ],
+          "cvss": {
+            "score": 7,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "plage": ">=3.0.0 <4.6.2"
+        },
+        "engine.io"
+      ],
+      "effets" : [],
+      "plage": "3.0.0-rc1 - 4.6.1",
+      "nœuds" : [
+        "node_modules/socket.io"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "socket.io-client": {
+      "nom": "socket.io-client",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        "engine.io-client",
+        "parseuri",
+        "socket.io-parser"
+      ],
+      "effets" : [],
+      "plage": "1.0.0-pre - 4.4.1",
+      "nœuds" : [
+        "node_modules/socket.io-client"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io-client",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "socket.io-parser": {
+      "nom": "socket.io-parser",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1100541,
+          "nom": "socket.io-parser",
+          "dépendance": "socket.io-parser",
+          "title": "Validation insuffisante lors du décodage d'un paquet Socket.IO",
+          "url": "https://github.com/advisories/GHSA-cqmj-92xf-r6r9",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-20",
+            "CWE-754"
+          ],
+          "cvss": {
+            "score": 7,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "plage": ">=4.0.4 <4.2.3"
+        },
+        {
+          "source": 1115154,
+          "nom": "socket.io-parser",
+          "dépendance": "socket.io-parser",
+          "title": "socket.io permet un nombre illimité de pièces jointes binaires",
+          "url": "https://github.com/advisories/GHSA-677m-j7p3-52f9",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-754"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": ">=4.0.0 <4.2.6"
+        },
+        {
+          "source": 1130713,
+          "nom": "socket.io-parser",
+          "dépendance": "socket.io-parser",
+          "title": "Socket.IO : Épuisement de la mémoire sans attache",
+          "url": "https://github.com/advisories/GHSA-2m8v-j782-fhvr",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-20",
+            "CWE-754"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": ">=4.0.0 <4.2.7"
+        }
+      ],
+      "effets" : [
+        "socket.io-client"
+      ],
+      "plage": "4.0.0 - 4.2.6",
+      "nœuds" : [
+        "node_modules/socket.io-parser"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io-client",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    },
+    "sqlite3": {
+      "nom": "sqlite3",
+      "gravité" : "élevée",
+      "isDirect": vrai,
+      "via": [
+        "node-gyp",
+        "goudron"
+      ],
+      "effets" : [],
+      "plage": "5.0.0 - 5.1.7",
+      "nœuds" : [
+        "node_modules/sqlite3"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "tar" : {
+      "nom": "tar",
+      "gravité" : "critique",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1112659,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar vulnérable à la création/écrasement arbitraire de fichiers via la traversée de chemins de liens physiques",
+          "url": "https://github.com/advisories/GHSA-34x7-hfp2-rc4v",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22",
+            "CWE-59"
+          ],
+          "cvss": {
+            "score" : 8,2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+          },
+          "plage": "<7.5.7"
+        },
+        {
+          "source": 1113300,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar est vulnérable à l'écrasement arbitraire de fichiers et à l'empoisonnement de liens symboliques en raison d'une assainissement insuffisant des chemins d'accès",
+          "url": "https://github.com/advisories/GHSA-8qq5-rm4j-mr97",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=7.5.2"
+        },
+        {
+          "source": 1113375,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "Lecture/écriture de fichiers arbitraires via l'échappement de la cible de lien physique à travers la chaîne de liens symboliques dans l'extraction node-tar",
+          "url": "https://github.com/advisories/GHSA-83g3-92jg-28cx",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 7,1,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+          },
+          "plage": "<7.5.8"
+        },
+        {
+          "source": 1114200,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "tar possède un chemin de liaison physique via un chemin de liaison relatif au lecteur",
+          "url": "https://github.com/advisories/GHSA-qffp-2rhf-9h96",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22",
+            "CWE-59"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=7.5.9"
+        },
+        {
+          "source": 1114302,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "Parcours de chemin de lien symbolique node-tar via un chemin de lien relatif au lecteur",
+          "url": "https://github.com/advisories/GHSA-9ppj-qmqm-q256",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=7.5.10"
+        },
+        {
+          "source": 1114680,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "Condition de concurrence dans les réservations de chemin node-tar via des collisions de ligatures Unicode sur macOS APFS",
+          "url": "https://github.com/advisories/GHSA-r6q2-hw4h-h46w",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-176",
+            "CWE-367"
+          ],
+          "cvss": {
+            "score" : 8,8,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
+          },
+          "plage": "<=7.5.3"
+        },
+        {
+          "source": 1120782,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar applique une surcharge de taille PAX aux en-têtes intermédiaires GNU long-name/long-link, ce qui provoque une différence d'interprétation du parseur tar (contrebande de fichiers)",
+          "url": "https://github.com/advisories/GHSA-vmf3-w455-68vh",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-436"
+          ],
+          "cvss": {
+            "score" : 0,
+            "vectorString": null
+          },
+          "plage": "<=7.5.15"
+        },
+        {
+          "source" : 1123939,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar : Plantage du processus suite à une confusion de type de chemin numérique PAX",
+          "url": "https://github.com/advisories/GHSA-w8wr-v893-vjvp",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-704"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": "<=7.5.17"
+        },
+        {
+          "source": 1123940,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar : Décompression/analyse DoS via entrée illimitée",
+          "url": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw",
+          "gravité" : "critique",
+          "cwe": [
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<=7.5.18"
+        },
+        {
+          "source" : 1123941,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar : Une taille d'entrée tar négative provoque une boucle infinie lors du remplacement d'archive",
+          "url": "https://github.com/advisories/GHSA-8x88-c5mf-7j5w",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<=7.5.17"
+        },
+        {
+          "source": 1123942,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar : Exception non interceptée : attaque par déni de service (DoS) via un octet NUL dans les enregistrements de chemin/linkpath PAX",
+          "url": "https://github.com/advisories/GHSA-gvwx-54wh-qm9j",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-248"
+          ],
+          "cvss": {
+            "score" : 5,3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "plage": "<=7.5.16"
+        },
+        {
+          "source": 1145647,
+          "nom": "tar",
+          "dépendance" : "tar",
+          "title": "node-tar : une récursion incontrôlée dans mapHas/filesFilter permet une attaque par déni de service (DoS) par débordement de pile impossible à intercepter via une archive tar à long chemin spécialement conçue avec sélection de membres",
+          "url": "https://github.com/advisorys/GHSA-r292-9mhp-454m",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-400",
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": "<=7.5.20"
+        }
+      ],
+      "effets" : [
+        "cacache",
+        "node-gyp",
+        "sqlite3"
+      ],
+      "plage": "<=7.5.20",
+      "nœuds" : [
+        "node_modules/sqlite3/node_modules/tar"
+      ],
+      "fixAvailable": {
+        "nom": "sqlite3",
+        "version": "6.0.1",
+        "isSemVerMajor": vrai
+      }
+    },
+    "uuid": {
+      "nom": "uuid",
+      "gravité" : "modérée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1119441,
+          "nom": "uuid",
+          "dépendance": "uuid",
+          "title": "uuid : Vérification des limites de la mémoire tampon manquante dans v3/v5/v6 lorsque buf est fourni",
+          "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+          "gravité" : "modérée",
+          "cwe": [
+            "CWE-787",
+            "CWE-1285"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "plage": "<11.1.1"
+        }
+      ],
+      "effets" : [
+        "istanbul-lib-processinfo",
+        "sequelize"
+      ],
+      "plage": "<11.1.1",
+      "nœuds" : [
+        "node_modules/uuid"
+      ],
+      "fixAvailable": {
+        "nom": "sequelize",
+        "version": "3.30.0",
+        "isSemVerMajor": vrai
+      }
+    },
+    "ws": {
+      "nom": "ws",
+      "gravité" : "élevée",
+      "isDirect": faux,
+      "via": [
+        {
+          "source": 1118729,
+          "nom": "ws",
+          "dépendance" : "ws",
+          "title": "ws affecté par une attaque DoS lors du traitement d'une requête avec de nombreux en-têtes HTTP",
+          "url": "https://github.com/advisories/GHSA-3h5v-q93c-6h6q",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-476"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": ">=7.0.0 <7.5.10"
+        },
+        {
+          "source": 1123260,
+          "nom": "ws",
+          "dépendance" : "ws",
+          "title": "ws : Attaque par déni de service (DoS) par épuisement de la mémoire à partir de minuscules fragments et blocs de données",
+          "url": "https://github.com/advisories/GHSA-96hv-2xvq-fx4p",
+          "gravité" : "élevée",
+          "cwe": [
+            "CWE-400",
+            "CWE-770",
+            "CWE-1050"
+          ],
+          "cvss": {
+            "score": 7,5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "plage": ">=7.0.0 <7.5.11"
+        }
+      ],
+      "effets" : [
+        "engine.io",
+        "engine.io-client"
+      ],
+      "plage": "7.0.0 - 7.5.10",
+      "nœuds" : [
+        "node_modules/engine.io-client/node_modules/ws",
+        "node_modules/engine.io/node_modules/ws"
+      ],
+      "fixAvailable": {
+        "nom": "socket.io",
+        "version": "4.8.3",
+        "isSemVerMajor": vrai
+      }
+    }
+  },
+  "métadonnées" : {
+    "vulnérabilités" : {
+      "info": 0,
+      "faible" : 3,
+      "modéré" : 16,
+      "haute" : 21,
+      "critique" : 7,
+      "total": 47
+    },
+    "dépendances": {
+      "prod": 724,
+      "dev": 654,
+      "optionnel" : 168,
+      "pair" : 0,
+      "peerOptional": 0,
+      "total": 1458
+    }
+  }
+}
